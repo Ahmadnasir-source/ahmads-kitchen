@@ -15,11 +15,11 @@ export const Route = createFileRoute("/")({
         content:
           "Smoky jollof rice, rich Nigerian soups and charcoal grills, cooked fresh daily in Minna, Niger State. Dine in, take away or order online.",
       },
-      { property: "og:title", content: "Ahmad's Kitchen | Nigerian Food in Minna" },
+      { property: "og:title", content: "Ahmad's Kitchen | Jollof, Soups & Grills in Minna" },
       {
         property: "og:description",
         content:
-          "Jollof rice, pepper soup, suya and more — cooked fresh daily in Minna, Niger State. Order online for delivery.",
+          "Smoky jollof rice, rich Nigerian soups and charcoal grills, cooked fresh daily in Minna, Niger State. Dine in, take away or order online.",
       },
     ],
   }),

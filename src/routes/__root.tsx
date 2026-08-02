@@ -80,15 +80,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ahmad's Kitchen | Nigerian Food in Minna" },
+      { title: "Ahmad's Kitchen | Jollof, Soups & Grills in Minna" },
       {
         name: "description",
         content:
-          "Ahmad's Kitchen serves smoky jollof, rich soups and charcoal grills in Minna, Niger State. Dine in, take away or order online.",
+          "Smoky jollof rice, rich Nigerian soups and charcoal grills, cooked fresh daily in Minna, Niger State. Dine in, take away or order online.",
       },
       { name: "author", content: "Ahmad's Kitchen" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Ahmad's Kitchen | Jollof, Soups & Grills in Minna" },
+      { name: "twitter:title", content: "Ahmad's Kitchen | Jollof, Soups & Grills in Minna" },
+      { property: "og:description", content: "Smoky jollof rice, rich Nigerian soups and charcoal grills, cooked fresh daily in Minna, Niger State. Dine in, take away or order online." },
+      { name: "twitter:description", content: "Smoky jollof rice, rich Nigerian soups and charcoal grills, cooked fresh daily in Minna, Niger State. Dine in, take away or order online." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/26b5b1ca-68ba-468f-a24d-01fca5d2aaf7/id-preview-9c0d67e5--998973c4-8b36-4372-b5e6-e597601b86f7.lovable.app-1785658366709.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/26b5b1ca-68ba-468f-a24d-01fca5d2aaf7/id-preview-9c0d67e5--998973c4-8b36-4372-b5e6-e597601b86f7.lovable.app-1785658366709.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
