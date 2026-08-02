@@ -24,8 +24,14 @@ Shared header nav (Home, About, Menu, Order, Contact) with a cart indicator, plu
 - Rice Dishes: Jollof Rice + Chicken (marked as the #1 pick), Fried Rice + Chicken/Beef, Basmati Coconut Rice + Grilled Fish, Banga Rice + Banga Stew + Chicken.
 - Soups & Swallow: Pepper Soup (Goat, Chicken, Fish), Egusi + Pounded Yam, Ogbono + Semovita, Nsala + Fufu.
 - Grills & Sides: Suya + Plantain + Sauce, Grilled Chicken + Chips, BBQ Fish + Yam.
+- Extras: Small Chops, Drinks, Desserts.
 
-Prices are needed from you — placeholder prices go in first and are easy to change.
+Prices are needed from you — placeholder prices in Naira go in first and are easy to change.
+
+## Location
+
+Based in Minna, Niger State, Nigeria — shown in the footer, About page, and Contact page, with delivery across Minna.
+
 
 ## Ordering and payments
 
