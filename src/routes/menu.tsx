@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Star, Utensils, Bike, PartyPopper } from "lucide-react";
 import { PageHero } from "@/components/SiteLayout";
 import { CATEGORIES, MENU, formatNaira } from "@/lib/menu";
+import { MENU_IMAGES } from "@/lib/menu-images";
+
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
@@ -40,20 +42,31 @@ function MenuPage() {
             </div>
             <ul className="mt-6 grid gap-5 sm:grid-cols-2">
               {MENU.filter((m) => m.category === cat.id).map((item) => (
-                <li key={item.id} className="surface-card flex justify-between gap-4 p-5">
-                  <div>
-                    <h3 className="flex items-center gap-2 text-base">
-                      {item.name}
-                      {item.signature && <Star className="h-4 w-4 text-primary" />}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.description}</p>
+                <li key={item.id} className="surface-card overflow-hidden">
+                  <img
+                    src={MENU_IMAGES[item.id]}
+                    alt={item.name}
+                    loading="lazy"
+                    width={768}
+                    height={576}
+                    className="h-44 w-full object-cover"
+                  />
+                  <div className="flex justify-between gap-4 p-5">
+                    <div>
+                      <h3 className="flex items-center gap-2 text-base">
+                        {item.name}
+                        {item.signature && <Star className="h-4 w-4 text-primary" />}
+                      </h3>
+                      <p className="mt-1 text-sm text-muted-foreground">{item.description}</p>
+                    </div>
+                    <span className="shrink-0 font-semibold text-primary">
+                      {formatNaira(item.price)}
+                    </span>
                   </div>
-                  <span className="shrink-0 font-semibold text-primary">
-                    {formatNaira(item.price)}
-                  </span>
                 </li>
               ))}
             </ul>
+
           </section>
         ))}
 
