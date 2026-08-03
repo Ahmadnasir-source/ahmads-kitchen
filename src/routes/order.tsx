@@ -5,6 +5,8 @@ import { Minus, Plus, Trash2, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { PageHero } from "@/components/SiteLayout";
 import { CATEGORIES, MENU, MENU_BY_ID, formatNaira, BUSINESS } from "@/lib/menu";
+import { MENU_IMAGES } from "@/lib/menu-images";
+
 import { useCart } from "@/lib/cart";
 import { placeOrder } from "@/lib/orders.functions";
 
@@ -80,28 +82,39 @@ function OrderPage() {
               <h2 className="border-b border-border/60 pb-2 text-xl text-gold">{cat.name}</h2>
               <ul className="mt-4 grid gap-4 sm:grid-cols-2">
                 {MENU.filter((m) => m.category === cat.id).map((item) => (
-                  <li key={item.id} className="surface-card flex flex-col p-5">
-                    <h3 className="text-base">{item.name}</h3>
-                    <p className="mt-1 flex-1 text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="font-semibold text-primary">
-                        {formatNaira(item.price)}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          cart.add(item.id);
-                          toast.success(`${item.name} added to cart`);
-                        }}
-                        className="rounded-full bg-gold px-4 py-1.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
-                      >
-                        Add
-                      </button>
+                  <li key={item.id} className="surface-card flex flex-col overflow-hidden">
+                    <img
+                      src={MENU_IMAGES[item.id]}
+                      alt={item.name}
+                      loading="lazy"
+                      width={768}
+                      height={576}
+                      className="h-36 w-full object-cover"
+                    />
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="text-base">{item.name}</h3>
+                      <p className="mt-1 flex-1 text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
+                      <div className="mt-4 flex items-center justify-between">
+                        <span className="font-semibold text-primary">
+                          {formatNaira(item.price)}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            cart.add(item.id);
+                            toast.success(`${item.name} added to cart`);
+                          }}
+                          className="rounded-full bg-gold px-4 py-1.5 text-sm font-semibold text-primary-foreground hover:opacity-90"
+                        >
+                          Add
+                        </button>
+                      </div>
                     </div>
                   </li>
                 ))}
+
               </ul>
             </section>
           ))}
