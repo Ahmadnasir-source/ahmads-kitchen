@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import logo from "@/assets/ahmads-kitchen-logo.png.asset.json";
+import logo from "@/assets/ahmads-kitchen-logo.png";
 import { BUSINESS } from "@/lib/menu";
 
 export function Footer() {
@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-border/70 bg-card/40">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-3">
         <div>
-          <img src={logo.url} alt="Ahmad's Kitchen logo" className="h-24 w-auto" />
+          <img src={logo} alt="Ahmad's Kitchen logo" className="h-24 w-auto" />
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             Home-style Nigerian cooking from Minna — jollof, soups, grills and everything in
             between, served hot and delivered fast.

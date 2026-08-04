@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ShoppingBag } from "lucide-react";
-import logo from "@/assets/ahmads-kitchen-logo.png.asset.json";
+import logo from "@/assets/ahmads-kitchen-logo.png";
 import { useCart } from "@/lib/cart";
 
 const NAV = [
@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo.url} alt="Ahmad's Kitchen logo" className="h-12 w-auto" />
+          <img src={logo} alt="Ahmad's Kitchen logo" className="h-12 w-auto" />
           <span className="font-display text-lg leading-tight text-gold sm:text-xl">
             Ahmad&apos;s Kitchen
           </span>
