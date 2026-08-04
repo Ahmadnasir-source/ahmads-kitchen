@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Flame, Truck, UtensilsCrossed, Star } from "lucide-react";
-import logo from "@/assets/ahmads-kitchen-logo.png.asset.json";
+import logo from "@/assets/ahmads-kitchen-logo.png";
 import heroJollof from "@/assets/hero-jollof.jpg";
 import grills from "@/assets/grills.jpg";
 import soups from "@/assets/soups.jpg";
@@ -44,7 +44,7 @@ function Home() {
         <div className="absolute inset-0 bg-linear-to-b from-background/70 via-background/85 to-background" />
         <div className="relative mx-auto max-w-6xl px-4 py-20 text-center sm:py-28">
           <img
-            src={logo.url}
+            src={logo}
             alt="Ahmad's Kitchen logo"
             className="mx-auto h-40 w-auto drop-shadow-2xl sm:h-52"
           />
